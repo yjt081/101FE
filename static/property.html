@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>101Acres | Property Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .property-img,
+      .property-info {
+        opacity: 0;
+        transform: translateY(40px);
+        animation: slideInUp 0.8s ease-out forwards;
+      }
+
+      .property-info {
+        animation-delay: 0.3s;
+      }
+
+      @keyframes slideInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .property-img img {
+        transition: transform 0.4s ease;
+        border-radius: 12px;
+      }
+
+      .property-img img:hover {
+        transform: scale(1.05);
+      }
+
+      .btn-primary {
+        position: relative;
+        overflow: hidden;
+        transition: background 0.3s ease;
+      }
+
+      .btn-primary::after {
+        content: "";
+        position: absolute;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.15);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        transition: transform 0.6s ease-out;
+      }
+
+      .btn-primary:hover::after {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .list-group-item {
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: fadeInLeft 0.5s forwards;
+      }
+
+      .list-group-item:nth-child(1) {
+        animation-delay: 0.4s;
+      }
+      .list-group-item:nth-child(2) {
+        animation-delay: 0.6s;
+      }
+      .list-group-item:nth-child(3) {
+        animation-delay: 0.8s;
+      }
+      .list-group-item:nth-child(4) {
+        animation-delay: 1s;
+      }
+
+      @keyframes fadeInLeft {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">101Acres</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="listing.html" class="nav-link">Listing</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container my-5">
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <img
+            src="assets/1.jpg"
+            alt="Property Image"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>3BHK Villa in Pune</h2>
+          <p class="text-muted">Location: Noida</p>
+          <h4 class="text-primary">₹1.25 Crore</h4>
+          <p>
+            Spacious 3-bedroom villa with modern amenities, private garden, and
+            close to schools and shopping centers. Perfect for families looking
+            for comfort and convenience.
+          </p>
+
+          <ul class="list-group mb-3">
+            <li class="list-group-item"><strong>Bedrooms:</strong> 3</li>
+            <li class="list-group-item"><strong>Bathrooms:</strong> 3</li>
+            <li class="list-group-item"><strong>Area:</strong> 2000 sq.ft.</li>
+            <li class="list-group-item"><strong>Type:</strong> Villa</li>
+          </ul>
+
+          <a href="contact.html" class="btn btn-primary">Contact Seller</a>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <img
+            src="assets/2.jpeg"
+            alt="Property Image"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>2BHK Apartment in Mumbai</h2>
+          <p class="text-muted">Location: Andheri</p>
+          <h4 class="text-primary">₹90 Lakh</h4>
+          <p>
+            Cozy 2-bedroom apartment in a gated community with gym, pool, and
+            24/7 security. Ideal for working professionals and small families.
+          </p>
+
+          <ul class="list-group mb-3">
+            <li class="list-group-item"><strong>Bedrooms:</strong> 2</li>
+            <li class="list-group-item"><strong>Bathrooms:</strong> 2</li>
+            <li class="list-group-item"><strong>Area:</strong> 1200 sq.ft.</li>
+            <li class="list-group-item"><strong>Type:</strong> Apartment</li>
+          </ul>
+
+          <a href="contact.html" class="btn btn-primary">Contact Seller</a>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <img
+            src="assets/3.jpeg"
+            alt="Property Image"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>4BHK Penthouse in Bangalore</h2>
+          <p class="text-muted">Location: Koramangala</p>
+          <h4 class="text-primary">₹3 Crore</h4>
+          <p>
+            Luxurious 4-bedroom penthouse with panoramic city views, private
+            terrace, and premium fittings. Perfect for luxury living.
+          </p>
+
+          <ul class="list-group mb-3">
+            <li class="list-group-item"><strong>Bedrooms:</strong> 4</li>
+            <li class="list-group-item"><strong>Bathrooms:</strong> 4</li>
+            <li class="list-group-item"><strong>Area:</strong> 3500 sq.ft.</li>
+            <li class="list-group-item"><strong>Type:</strong> Penthouse</li>
+          </ul>
+
+          <a href="contact.html" class="btn btn-primary">Contact Seller</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3 text-center">
+      <p class="mb-0">© 2025 101Acres. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
